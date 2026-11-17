@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlignWorks Cleaning Solutions | Commercial &amp; Residential Cleaning in Calgary</title>
+<meta name="description" content="AlignWorks Cleaning Solutions is a locally owned Calgary cleaning company for offices, post-construction, carpet, window, exterior and residential cleaning. Request a free quote.">
+<link rel="icon" href="images/icon-residential.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#222F40;
+  --ink-2:#17202C;
+  --ink-3:#2C3B50;
+  --sky:#00AEF1;
+  --sky-deep:#0093CC;
+  --sky-soft:#E4F6FE;
+  --paper:#F3F5F7;
+  --line:#D8DEE5;
+  --muted:#5E6B7B;
+  --white:#fff;
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Public Sans',system-ui,sans-serif;
+  --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+.h-display{font-family:var(--display);font-variation-settings:"wdth" 112;font-weight:800;letter-spacing:-.025em;line-height:1.02}
+.label{font-family:var(--display);font-variation-settings:"wdth" 118;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:700;font-size:15px;padding:16px 26px;border:2px solid transparent;transition:.25s;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-sky{background:var(--sky);color:var(--ink-2)}
+.btn-sky:hover{background:var(--white);border-color:var(--sky)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:var(--sky);color:var(--ink-2)}
+.btn-line{border-color:currentColor}
+.btn-line:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.icon-mask{display:inline-block;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+
+/* ---------- utility + header ---------- */
+.utility{background:var(--ink-2);color:#C9D3DF;font-size:13.5px}
+.utility .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:20px}
+.utility a:hover{color:var(--sky)}
+.utility .u-left{display:flex;gap:26px}
+.utility .u-left span,.utility .u-left a{display:flex;align-items:center;gap:8px}
+.utility svg{width:14px;height:14px;color:var(--sky)}
+.utility .u-right{display:flex;gap:16px}
+.utility .u-right a{opacity:.85}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:28px}
+.logo img{height:46px;width:auto}
+nav.main{display:flex;gap:4px}
+nav.main a{font-weight:600;font-size:15px;padding:10px 14px;position:relative}
+nav.main a::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--sky);transform:scaleX(0);transform-origin:left;transition:.25s}
+nav.main a:hover::after,nav.main a.on::after{transform:scaleX(1)}
+.head-cta{display:flex;align-items:center;gap:18px}
+.head-phone{font-family:var(--display);font-variation-settings:"wdth" 106;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px}
+.head-phone svg{width:18px;height:18px;color:var(--sky)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:6px auto;transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--paper);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.45;mask-image:linear-gradient(100deg,#000 0%,transparent 62%);-webkit-mask-image:linear-gradient(100deg,#000 0%,transparent 62%)}
+.hero > .wrap{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center;padding:72px 0 64px}
+.hero-kicker{display:flex;align-items:center;gap:12px;color:var(--sky-deep);margin-bottom:22px}
+.hero-kicker::before{content:"";width:34px;height:2px;background:var(--sky)}
+.hero h1{font-size:clamp(42px,5.6vw,78px);color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero-sub{font-size:18.5px;color:var(--muted);max-width:560px;margin:24px 0 34px}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;background:var(--white);border:1px solid var(--line);padding:5px;margin-bottom:18px;position:relative}
+.switch button{border:0;background:none;padding:12px 22px;font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:700;font-size:14.5px;cursor:pointer;position:relative;z-index:1;transition:color .3s;display:flex;align-items:center;gap:9px;justify-content:center}
+.switch button .icon-mask{width:18px;height:18px}
+.switch .pill{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);background:var(--ink);transition:transform .35s cubic-bezier(.7,0,.2,1)}
+.switch button.on{color:var(--white)}
+.switch.home .pill{transform:translateX(100%)}
+.aud-panel{display:none;animation:fade .45s ease}
+.aud-panel.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.aud-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;max-width:600px}
+.aud-list span{background:var(--white);border:1px solid var(--line);padding:7px 13px;font-size:14px;font-weight:600}
+.aud-list span b{color:var(--sky-deep);font-weight:700;margin-left:4px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-visual{position:relative}
+.frame{position:relative;padding:14px}
+.frame::before,.frame::after,.frame .c1,.frame .c2{content:"";position:absolute;width:30px;height:30px;border-color:var(--sky);border-style:solid}
+.frame::before{top:0;left:0;border-width:2px 0 0 2px}
+.frame::after{bottom:0;right:0;border-width:0 2px 2px 0}
+.frame .c1{top:0;right:0;border-width:2px 2px 0 0}
+.frame .c2{bottom:0;left:0;border-width:0 0 2px 2px}
+.hero-visual img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.spec{position:absolute;left:-46px;bottom:46px;background:var(--ink);color:var(--white);padding:20px 22px;width:250px;box-shadow:0 24px 50px -20px rgba(23,32,44,.55)}
+.spec .label{color:var(--sky);font-size:10.5px}
+.spec p{font-family:var(--display);font-variation-settings:"wdth" 104;font-weight:600;font-size:17px;line-height:1.3;margin-top:8px}
+.spec-row{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.14);margin-top:14px;padding-top:12px;font-size:13px;color:#B7C3D1}
+.spec-row b{color:var(--white)}
+.ruler{position:relative;border-top:1px solid var(--line);background:var(--white)}
+.ruler .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.ruler-item{padding:26px 24px 24px;border-left:1px solid var(--line);position:relative;display:flex;gap:14px;align-items:flex-start}
+.ruler-item:last-child{border-right:1px solid var(--line)}
+.ruler-item::before{content:"";position:absolute;top:-1px;left:-1px;width:44px;height:3px;background:var(--sky)}
+.ruler-item .n{font-family:var(--display);font-variation-settings:"wdth" 120;font-weight:800;font-size:13px;color:var(--sky-deep);padding-top:2px}
+.ruler-item h3{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:700;font-size:16.5px;line-height:1.25}
+.ruler-item p{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.5}
+
+/* ---------- commercial scope ---------- */
+.scope{background:var(--ink);color:var(--white);padding:110px 0 0;position:relative;overflow:hidden}
+.scope::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border:1px solid rgba(0,174,241,.22);border-radius:50%}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.sec-head .label{color:var(--sky);display:block;margin-bottom:16px}
+.sec-head h2{font-size:clamp(34px,4.2vw,58px)}
+.sec-head p{color:#B9C5D3;font-size:17.5px;max-width:520px}
+.scope-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.scope-list{list-style:none;border-right:1px solid rgba(255,255,255,.14)}
+.scope-list button{width:100%;text-align:left;display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:6px;background:none;border:0;border-bottom:1px solid rgba(255,255,255,.14);padding:24px 28px 24px 0;cursor:pointer;color:#AEBBCB;transition:.3s;position:relative}
+.scope-list button::before{content:"";position:absolute;left:0;top:-1px;bottom:-1px;width:0;background:var(--sky);transition:width .35s}
+.scope-list button .no{font-family:var(--display);font-variation-settings:"wdth" 120;font-weight:700;font-size:13px;padding-left:18px;transition:.3s}
+.scope-list button .t{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:700;font-size:22px;letter-spacing:-.01em}
+.scope-list button .icon-mask{width:30px;height:30px;opacity:.5;transition:.3s}
+.scope-list button:hover{color:var(--white)}
+.scope-list button.on{color:var(--white);background:rgba(255,255,255,.04)}
+.scope-list button.on::before{width:4px}
+.scope-list button.on .no{color:var(--sky)}
+.scope-list button.on .icon-mask{opacity:1;color:var(--sky)}
+.scope-view{position:relative;min-height:560px}
+.scope-pane{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;opacity:0;visibility:hidden;transition:opacity .45s}
+.scope-pane.on{opacity:1;visibility:visible;position:relative}
+.scope-pane .img{position:relative;overflow:hidden;min-height:320px}
+.scope-pane .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.2s}
+.scope-pane.on .img img{transform:scale(1)}
+.scope-pane .txt{padding:34px 0 40px 44px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px}
+.scope-pane h3{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:800;font-size:26px;line-height:1.15;margin-bottom:10px}
+.scope-pane p{color:#B9C5D3;font-size:15.5px}
+.scope-pane ul{list-style:none;display:grid;gap:9px;align-content:start}
+.scope-pane li{display:flex;gap:10px;font-size:14.5px;color:#DCE4EC;line-height:1.45}
+.scope-pane li::before{content:"";flex:none;width:8px;height:8px;margin-top:7px;background:var(--sky)}
+.props{display:grid;grid-template-columns:auto repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14);margin-top:0}
+.props > div{padding:30px 26px;border-right:1px solid rgba(255,255,255,.14)}
+.props > div:last-child{border-right:0}
+.props .lead .label{color:var(--sky)}
+.props .lead p{font-family:var(--display);font-variation-settings:"wdth" 106;font-weight:700;font-size:19px;line-height:1.2;margin-top:8px;max-width:190px}
+.props h4{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:700;font-size:17px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.props h4 i{width:10px;height:10px;border:2px solid var(--sky);display:inline-block}
+.props p{font-size:14px;color:#AEBBCB;line-height:1.5}
+.scope-cta{background:var(--sky);color:var(--ink-2)}
+.scope-cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:28px 0}
+.scope-cta p{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:22px;letter-spacing:-.01em}
+.scope-cta .btn-ink:hover{background:var(--white);color:var(--ink)}
+
+/* ---------- service index ---------- */
+.index{padding:120px 0;background:var(--white)}
+.index .sec-head .label{color:var(--sky-deep)}
+.index .sec-head p{color:var(--muted)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{border:1px solid var(--line);background:var(--white);padding:10px 18px;font-weight:600;font-size:14.5px;cursor:pointer;transition:.25s}
+.filters button .ct{font-size:12px;color:var(--muted);margin-left:6px}
+.filters button.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.filters button.on .ct{color:var(--sky)}
+.ledger{border-top:2px solid var(--ink)}
+.ledger-head,.row{display:grid;grid-template-columns:70px 1.15fr 1.6fr 150px 170px;align-items:center;gap:20px}
+.ledger-head{padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.ledger-head .label{font-size:11px}
+.row{padding:22px 0;border-bottom:1px solid var(--line);transition:background .25s,padding .25s;position:relative}
+.row:hover{background:var(--paper);padding-left:14px;padding-right:14px}
+.row .ico{width:52px;height:52px;background:var(--sky-soft);display:grid;place-items:center;color:var(--ink);transition:.25s}
+.row:hover .ico{background:var(--ink);color:var(--sky)}
+.row .ico .icon-mask{width:30px;height:30px}
+.row h3{font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:700;font-size:19px;line-height:1.2}
+.row .tags{display:flex;gap:6px;margin-top:6px}
+.row .tags span{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sky-deep)}
+.row .tags span+span::before{content:"/";color:var(--line);margin-right:6px}
+.row p{font-size:15px;color:var(--muted);line-height:1.5}
+.row .price{font-family:var(--display);font-variation-settings:"wdth" 104;font-weight:800;font-size:22px}
+.row .price small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.02em}
+.row .price.q{font-size:16px;color:var(--ink-3)}
+.row .go{justify-self:end;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--sky);padding-bottom:3px}
+.row .go svg{width:16px;height:16px;transition:transform .25s}
+.row:hover .go svg{transform:translateX(4px)}
+.row.hide{display:none}
+.index-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:30px;flex-wrap:wrap}
+.index-foot p{color:var(--muted);font-size:15px}
+
+/* ---------- results ---------- */
+.results{background:var(--paper);padding:120px 0;position:relative}
+.results .sec-head .label{color:var(--sky-deep)}
+.results .sec-head p{color:var(--muted)}
+.res-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:stretch}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:var(--white);padding:12px;border:1px solid var(--line)}
+.ba figure{position:relative;overflow:hidden;background:var(--ink)}
+.ba img{width:100%;height:560px;object-fit:cover}
+.ba figcaption{position:absolute;left:12px;top:12px;padding:6px 12px;font-family:var(--display);font-variation-settings:"wdth" 118;font-weight:800;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;background:var(--white);color:var(--ink)}
+.ba figure:last-child figcaption{background:var(--sky);color:var(--ink-2)}
+.ba-note{grid-column:1/-1;display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);padding:6px 4px 2px}
+.ba-note b{color:var(--ink)}
+.reviews{display:grid;gap:18px;align-content:stretch}
+.review{background:var(--white);border:1px solid var(--line);padding:32px 32px 28px;position:relative;display:flex;flex-direction:column}
+.review .stars{display:flex;gap:3px;color:var(--sky);margin-bottom:16px}
+.review .stars svg{width:17px;height:17px}
+.review blockquote{font-family:var(--display);font-variation-settings:"wdth" 100;font-weight:500;font-size:18px;line-height:1.5;color:var(--ink);flex:1}
+.review .who{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.review .av{width:40px;height:40px;background:var(--ink);color:var(--white);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px}
+.review .who b{display:block;font-size:15px}
+.review .who b{color:var(--ink)}
+.review .who .r{font-size:13px;color:var(--muted)}
+.review.dark .who b{color:var(--white)}
+.review.dark{background:var(--ink);border-color:var(--ink)}
+.review.dark blockquote{color:var(--white)}
+.review.dark .who{border-color:rgba(255,255,255,.15)}
+.review.dark .who .r{color:#AEBBCB}
+.review.dark .av{background:var(--sky);color:var(--ink-2)}
+.port-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin-top:28px;border-bottom:2px solid var(--sky);padding-bottom:3px}
+.port-link svg{width:16px;height:16px}
+
+/* ---------- owner / about ---------- */
+.skyline{position:relative;height:clamp(240px,30vw,420px);overflow:hidden}
+.skyline img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.skyline::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,32,44,0) 30%,rgba(23,32,44,.92) 100%)}
+.skyline .tag{position:absolute;z-index:1;left:0;right:0;bottom:28px}
+.skyline .tag .wrap{display:flex;justify-content:space-between;align-items:end;color:var(--white)}
+.skyline .tag .label{color:var(--sky)}
+.skyline .tag strong{font-family:var(--display);font-variation-settings:"wdth" 120;font-weight:800;font-size:clamp(28px,4vw,52px);letter-spacing:-.02em;line-height:1}
+.owner{background:var(--ink-2);color:var(--white);padding:100px 0 110px}
+.owner .wrap{display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:start}
+.owner-photo{position:relative}
+.owner-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.9)}
+.owner-photo .cap{margin-top:16px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
+.owner-photo .cap b{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:19px}
+.owner-photo .cap span{color:var(--sky);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.owner .label{color:var(--sky)}
+.owner blockquote{font-family:var(--display);font-variation-settings:"wdth" 104;font-weight:700;font-size:clamp(28px,3.4vw,46px);line-height:1.15;letter-spacing:-.02em;margin:18px 0 34px;position:relative}
+.owner blockquote::before{content:"\201C";color:var(--sky);margin-right:4px}
+.owner blockquote::after{content:"\201D";color:var(--sky)}
+.owner .about{display:grid;grid-template-columns:1fr 1fr;gap:36px;border-top:1px solid rgba(255,255,255,.14);padding-top:30px}
+.owner .about p{color:#B9C5D3;font-size:16px}
+.owner .about h3{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:700;font-size:18px;margin-bottom:8px;color:var(--white)}
+.owner .btn{margin-top:34px}
+
+/* ---------- quote ---------- */
+.quote{padding:120px 0;background:var(--white)}
+.quote .wrap{display:grid;grid-template-columns:.8fr 1.2fr;border:1px solid var(--line)}
+.q-side{background:var(--ink);color:var(--white);padding:52px 44px;display:flex;flex-direction:column}
+.q-side .label{color:var(--sky)}
+.q-side h2{font-size:clamp(32px,3.4vw,46px);margin:14px 0 16px}
+.q-side > p{color:#B9C5D3}
+.q-lines{margin-top:36px;display:grid;border-top:1px solid rgba(255,255,255,.14)}
+.q-lines a,.q-lines div{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.q-lines svg{width:20px;height:20px;color:var(--sky)}
+.q-lines small{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8E9DAF;font-weight:700}
+.q-lines b{font-family:var(--display);font-variation-settings:"wdth" 104;font-weight:700;font-size:17px;word-break:break-word}
+.q-lines a:hover b{color:var(--sky)}
+.q-social{display:flex;gap:10px;margin-top:auto;padding-top:34px}
+.q-social a{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.25s}
+.q-social a:hover{background:var(--sky);border-color:var(--sky);color:var(--ink-2)}
+.q-social svg{width:17px;height:17px}
+form.q-form{padding:52px 48px;background:var(--white)}
+.q-form .top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.q-form h3{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:22px}
+.q-form .switch{margin:0}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:700;color:var(--ink)}
+.field input,.field select,.field textarea{border:0;border-bottom:2px solid var(--line);background:var(--paper);padding:14px 14px;font-size:15.5px;outline:none;transition:border-color .25s,background .25s;border-radius:0;appearance:none;-webkit-appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222F40' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sky);background:var(--white)}
+.biz-only{display:contents}
+.q-form.home-mode .biz-only{display:none}
+.q-submit{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:28px;flex-wrap:wrap}
+.q-submit p{font-size:13.5px;color:var(--muted);max-width:330px}
+.q-ok{display:none;margin-top:18px;padding:14px 16px;background:var(--sky-soft);border-left:4px solid var(--sky);font-weight:600;font-size:15px}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink-2);color:#AEBBCB;padding:80px 0 0;font-size:15px}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.2fr;gap:44px;padding-bottom:56px}
+.f-brand img{height:52px;width:auto;margin-bottom:20px}
+.f-brand p{max-width:330px}
+footer h4{font-family:var(--display);font-variation-settings:"wdth" 118;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:var(--sky)}
+.f-contact a,.f-contact div{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+.f-contact svg{width:17px;height:17px;color:var(--sky);flex:none;margin-top:3px}
+.f-contact a:hover{color:var(--white)}
+.f-social{display:flex;gap:10px;margin-top:20px}
+.f-social a{width:38px;height:38px;border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;transition:.25s}
+.f-social a:hover{background:var(--sky);border-color:var(--sky);color:var(--ink-2)}
+.f-social svg{width:16px;height:16px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px}
+.f-bottom a{color:var(--white)}
+.f-bottom a:hover{color:var(--sky)}
+.f-word{font-family:var(--display);font-variation-settings:"wdth" 125;font-weight:900;font-size:clamp(60px,13.5vw,196px);line-height:.95;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.1);white-space:nowrap;overflow:hidden;text-align:center;padding-top:10px;user-select:none}
+.f-word span{-webkit-text-stroke:1px rgba(0,174,241,.35)}
+
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  nav.main{display:none}
+  .burger{display:block}
+  .head-phone{display:none}
+  nav.main.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--white);padding:12px 24px 22px;border-bottom:1px solid var(--line)}
+  .hero > .wrap{grid-template-columns:1fr;gap:56px}
+  .hero-visual{max-width:520px;margin-left:46px}
+  .ruler .wrap{grid-template-columns:1fr 1fr}
+  .ruler-item:nth-child(2){border-right:1px solid var(--line)}
+  .ruler-item:nth-child(n+3){border-top:1px solid var(--line)}
+  .sec-head{grid-template-columns:1fr;gap:20px}
+  .scope-grid{grid-template-columns:1fr}
+  .scope-list{border-right:0}
+  .scope-pane .txt{padding-left:0}
+  .props{grid-template-columns:1fr 1fr}
+  .props .lead{grid-column:1/-1;border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}
+  .props > div:nth-child(3){border-right:0}
+  .props > div:nth-child(n+4){border-top:1px solid rgba(255,255,255,.14)}
+  .ledger-head{display:none}
+  .row{grid-template-columns:60px 1fr auto;grid-template-areas:"i t p" "i d d" "i g g";row-gap:8px}
+  .row .ico{grid-area:i;align-self:start}
+  .row .tt{grid-area:t}
+  .row p{grid-area:d}
+  .row .price{grid-area:p;text-align:right}
+  .row .go{grid-area:g;justify-self:start}
+  .res-grid{grid-template-columns:1fr}
+  .owner .wrap{grid-template-columns:1fr;gap:44px}
+  .owner-photo{max-width:320px}
+  .quote .wrap{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  body{font-size:16px;padding-bottom:64px}
+  .utility .u-left a:nth-child(2),.utility .u-left span,.utility .u-right{display:none}
+  header.site .wrap{height:72px}
+  nav.main.open{top:72px}
+  .logo img{height:38px}
+  .head-cta .btn{display:none}
+  .hero > .wrap{padding:48px 0}
+  .switch{width:100%}
+  .switch button{padding:12px 10px;font-size:13.5px}
+  .hero-visual{margin-left:0}
+  .spec{position:relative;left:auto;bottom:auto;width:auto;margin-top:-30px;margin-inline:20px}
+  .ruler .wrap{grid-template-columns:1fr}
+  .ruler-item{border-right:1px solid var(--line)}
+  .ruler-item:nth-child(n+2){border-top:1px solid var(--line)}
+  .scope,.index,.results,.quote{padding-top:80px}
+  .index,.results,.quote{padding-bottom:80px}
+  .scope-list button .t{font-size:19px}
+  .scope-pane .txt{grid-template-columns:1fr;gap:20px}
+  .scope-view{min-height:0}
+  .props{grid-template-columns:1fr}
+  .props > div{border-right:0!important;border-top:1px solid rgba(255,255,255,.14)}
+  .scope-cta .wrap{flex-direction:column;align-items:flex-start}
+  .ba img{height:380px}
+  .owner .about{grid-template-columns:1fr}
+  .q-side,form.q-form{padding:36px 24px}
+  .fields{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr}
+  .skyline .tag .wrap{flex-direction:column;align-items:flex-start;gap:6px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;box-shadow:0 -10px 30px rgba(0,0,0,.15)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:60px;font-family:var(--display);font-variation-settings:"wdth" 108;font-weight:700;font-size:15px}
+  .mbar a:first-child{background:var(--ink);color:var(--white)}
+  .mbar a:last-child{background:var(--sky);color:var(--ink-2)}
+  .mbar svg{width:18px;height:18px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2-2.8V9.1a6.3 6.3 0 1 0 5.4 6.3V8.6a7.7 7.7 0 0 0 4.4 1.4V6.6a4.4 4.4 0 0 1-4.4-4.6z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></symbol>
+</svg>
+
+<!-- utility bar -->
+<div class="utility">
+  <div class="wrap">
+    <div class="u-left">
+      <a href="tel:+15875724389"><svg><use href="#i-phone"/></svg>(587) 572-4389</a>
+      <a href="mailto:services@alignworkssolutions.com"><svg><use href="#i-mail"/></svg>services@alignworkssolutions.com</a>
+      <span><svg><use href="#i-shield"/></svg>Locally owned, insured, Calgary AB</span>
+    </div>
+    <div class="u-right">
+      <a href="https://www.instagram.com/alignworkssolutions/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/AlignWorksSolutions/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@alignworkssolutions" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.linkedin.com/company/alignworks-solutions" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- header -->
+<header class="site">
+  <div class="wrap">
+    <a href="https://www.alignworkssolutions.com/" class="logo" aria-label="AlignWorks Cleaning Solutions home"><img src="images/logo.png" alt="AlignWorks Cleaning Solutions"></a>
+    <nav class="main" id="nav">
+      <a href="https://www.alignworkssolutions.com/" class="on">Home</a>
+      <a href="https://www.alignworkssolutions.com/aboutus">About Us</a>
+      <a href="https://www.alignworkssolutions.com/services">Services</a>
+      <a href="https://www.alignworkssolutions.com/portfolio">Portfolio</a>
+      <a href="https://www.alignworkssolutions.com/blog">Blog</a>
+      <a href="https://www.alignworkssolutions.com/contact">Contact Us</a>
+    </nav>
+    <div class="head-cta">
+      <a href="tel:+15875724389" class="head-phone"><svg><use href="#i-phone"/></svg>(587) 572-4389</a>
+      <a href="#quote" class="btn btn-ink">Request a Free Quote</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="hero-kicker label">Welcome to AlignWorks Cleaning Solutions</div>
+      <h1 class="h-display">Calgary cleaning, <em>aligned</em> to the way you work and live.</h1>
+      <p class="hero-sub">Your reliable choice for professional cleaning in Calgary. Offices, job sites and homes, cleaned with our own high-performance equipment and non-toxic, eco-friendly products. One-time or on a schedule.</p>
+
+      <div class="switch" id="heroSwitch">
+        <span class="pill"></span>
+        <button class="on" data-aud="biz"><span class="icon-mask" style="--i:url(images/icon-commercial.png)"></span>For businesses</button>
+        <button data-aud="home"><span class="icon-mask" style="--i:url(images/icon-residential.png)"></span>For homes</button>
+      </div>
+
+      <div class="aud-panel on" data-panel="biz">
+        <div class="aud-list">
+          <span>Office cleaning</span><span>Post-construction</span><span>Carpet</span><span>Windows</span><span>Exterior</span><span>Disinfection</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#quote" class="btn btn-sky" data-mode="biz">Request a commercial quote <svg><use href="#i-arrow"/></svg></a>
+          <a href="#commercial" class="btn btn-line">See commercial scope</a>
+        </div>
+      </div>
+      <div class="aud-panel" data-panel="home">
+        <div class="aud-list">
+          <span>Residential <b>$109.90</b></span><span>Home Detox <b>$99.90</b></span><span>Deep Cleaning <b>$134.90</b></span><span>Move In / Out <b>$134.90</b></span><span>Carpet <b>$119.90</b></span><span>Gutters <b>Quote</b></span>
+        </div>
+        <div class="hero-btns">
+          <a href="#quote" class="btn btn-sky" data-mode="home">Book Now <svg><use href="#i-arrow"/></svg></a>
+          <a href="#services" class="btn btn-line">View all prices</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="frame"><span class="c1"></span><span class="c2"></span>
+        <img src="images/hero-commercial-crew.jpg" alt="AlignWorks cleaner vacuuming a Calgary office floor">
+      </div>
+      <div class="spec">
+        <span class="label">Work order</span>
+        <p>Commercial and residential cleaning across Calgary</p>
+        <div class="spec-row"><span>Visits</span><b>One-time or scheduled</b></div>
+        <div class="spec-row"><span>Quotes</span><b>Free</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ruler">
+    <div class="wrap">
+      <div class="ruler-item"><span class="n">01</span><div><h3>Locally owned</h3><p>Operated in Calgary by people from your neighbourhood.</p></div></div>
+      <div class="ruler-item"><span class="n">02</span><div><h3>Our own equipment</h3><p>High-performance tools brought to every job.</p></div></div>
+      <div class="ruler-item"><span class="n">03</span><div><h3>Non-toxic products</h3><p>Safe for families, pets, staff and the environment.</p></div></div>
+      <div class="ruler-item"><span class="n">04</span><div><h3>Fully insured</h3><p>Experienced cleaners you can trust on site.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- commercial scope -->
+<section class="scope" id="commercial">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="label">Commercial cleaning</span>
+        <h2 class="h-display">One crew for the inside, the outside and the handover.</h2>
+      </div>
+      <p>From day-to-day office upkeep to post-construction occupancy readiness, AlignWorks covers the full scope a Calgary business property needs. Pick a service to see what it includes.</p>
+    </div>
+
+    <div class="scope-grid rv">
+      <div class="scope-list" role="tablist">
+        <button class="on" data-scope="0"><span class="no">01</span><span class="t">Office cleaning</span><span class="icon-mask" style="--i:url(images/icon-commercial.png)"></span></button>
+        <button data-scope="1"><span class="no">02</span><span class="t">Post-construction</span><span class="icon-mask" style="--i:url(images/icon-post-construction.png)"></span></button>
+        <button data-scope="2"><span class="no">03</span><span class="t">Carpet cleaning</span><span class="icon-mask" style="--i:url(images/icon-carpet.png)"></span></button>
+        <button data-scope="3"><span class="no">04</span><span class="t">Window cleaning</span><span class="icon-mask" style="--i:url(images/icon-windows.png)"></span></button>
+        <button data-scope="4"><span class="no">05</span><span class="t">Exterior cleaning</span><span class="icon-mask" style="--i:url(images/icon-exterior.png)"></span></button>
+        <button data-scope="5"><span class="no">06</span><span class="t">Disinfection</span><span class="icon-mask" style="--i:url(images/icon-disinfection.png)"></span></button>
+      </div>
+
+      <div class="scope-view">
+        <div class="scope-pane on">
+          <div class="img"><img src="images/scope-office.jpg" alt="Commercial office cleaning in Calgary"></div>
+          <div class="txt">
+            <div><h3>Office and workspace cleaning</h3><p>Reliable cleaning for offices and business spaces, booked as a one-time clean or on a weekly, bi-weekly or monthly schedule.</p></div>
+            <ul><li>Desks, common areas and washrooms</li><li>Floors, baseboards and high-touch surfaces</li><li>Non-toxic products safe for staff</li></ul>
+          </div>
+        </div>
+        <div class="scope-pane">
+          <div class="img"><img src="images/scope-post-construction.jpg" alt="Post-construction cleaning of a new Calgary space"></div>
+          <div class="txt">
+            <div><h3>Post-construction cleaning</h3><p>Dust, debris and residue removed after a build or renovation so the space is ready for occupancy and handover.</p></div>
+            <ul><li>Construction dust and debris removal</li><li>Detailed wipe-down of surfaces and fixtures</li><li>Occupancy-ready finish</li></ul>
+          </div>
+        </div>
+        <div class="scope-pane">
+          <div class="img"><img src="images/scope-carpet.jpg" alt="Commercial carpet cleaning"></div>
+          <div class="txt">
+            <div><h3>Carpet cleaning</h3><p>Deep carpet cleaning that lifts dirt, allergens and stains from high-traffic floors using our own equipment.</p></div>
+            <ul><li>Dirt and allergen removal</li><li>Stain treatment</li><li>Fresh, healthier floors</li></ul>
+          </div>
+        </div>
+        <div class="scope-pane">
+          <div class="img"><img src="images/scope-windows.jpg" alt="Commercial window cleaning"></div>
+          <div class="txt">
+            <div><h3>Window cleaning</h3><p>Interior and exterior glass cleaned to a streak-free finish so your property looks sharp from the street and inside.</p></div>
+            <ul><li>Interior glass</li><li>Exterior glass</li><li>Frames and sills</li></ul>
+          </div>
+        </div>
+        <div class="scope-pane">
+          <div class="img"><img src="images/scope-exterior.jpg" alt="Exterior pressure washing of a commercial walkway"></div>
+          <div class="txt">
+            <div><h3>Exterior cleaning</h3><p>Patios, siding and driveways washed down to restore curb appeal, plus gutter cleaning and gutter guard installation.</p></div>
+            <ul><li>Patios, siding and driveways</li><li>Gutter cleaning</li><li>Gutter guard installation</li></ul>
+          </div>
+        </div>
+        <div class="scope-pane">
+          <div class="img"><img src="images/scope-disinfection.jpg" alt="Disinfection service with air filtration"></div>
+          <div class="txt">
+            <div><h3>Disinfection</h3><p>Disinfection with air filtration to reduce bacteria, viruses and airborne contaminants in shared spaces.</p></div>
+            <ul><li>High-touch surface disinfection</li><li>Air filtration</li><li>Healthier shared spaces</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="props rv">
+      <div class="lead"><span class="label">Property types</span><p>Who we clean for</p></div>
+      <div><h4><i></i>Offices</h4><p>Workspaces and business suites, cleaned on your schedule.</p></div>
+      <div><h4><i></i>Commercial spaces</h4><p>Business properties that need a clean, presentable interior.</p></div>
+      <div><h4><i></i>New builds and renovations</h4><p>Post-construction cleanup through to occupancy.</p></div>
+      <div><h4><i></i>Building exteriors</h4><p>Windows, siding, walkways and gutters.</p></div>
+    </div>
+  </div>
+
+  <div class="scope-cta">
+    <div class="wrap">
+      <p>Managing a commercial property in Calgary? Get a scoped quote.</p>
+      <a href="#quote" class="btn btn-ink" data-mode="biz">Request a commercial quote <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- service index -->
+<section class="index" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="label">Services and starting prices</span>
+        <h2 class="h-display">Every service, priced up front.</h2>
+      </div>
+      <p>Twelve services for homes and businesses. Prices are starting rates in CAD; larger and commercial jobs are quoted for free.</p>
+    </div>
+
+    <div class="filters rv" id="filters">
+      <button class="on" data-f="all">All<span class="ct">12</span></button>
+      <button data-f="biz">Commercial<span class="ct">6</span></button>
+      <button data-f="home">Residential<span class="ct">10</span></button>
+      <button data-f="ext">Exterior<span class="ct">4</span></button>
+    </div>
+
+    <div class="ledger rv">
+      <div class="ledger-head"><span></span><span class="label">Service</span><span class="label">What it covers</span><span class="label">Starting at</span><span></span></div>
+
+      <a class="row" data-cat="biz" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-commercial.png)"></span></span>
+        <div class="tt"><h3>Commercial Cleaning</h3><div class="tags"><span>Commercial</span></div></div>
+        <p>Offices and business spaces, one-time or scheduled, through to occupancy readiness.</p>
+        <span class="price q">Free quote</span>
+        <span class="go">Request a Quote <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="biz" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-post-construction.png)"></span></span>
+        <div class="tt"><h3>Post-Construction Cleaning</h3><div class="tags"><span>Commercial</span></div></div>
+        <p>Dust and debris cleared after builds and renovations.</p>
+        <span class="price q">Free quote</span>
+        <span class="go">Request a Quote <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="biz home" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-carpet.png)"></span></span>
+        <div class="tt"><h3>Carpet Cleaning</h3><div class="tags"><span>Commercial</span><span>Residential</span></div></div>
+        <p>Removes dirt, allergens and stains for fresher floors.</p>
+        <span class="price"><small>from</small>$119.90</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="biz home ext" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-windows.png)"></span></span>
+        <div class="tt"><h3>Windows Cleaning</h3><div class="tags"><span>Commercial</span><span>Exterior</span></div></div>
+        <p>Interior and exterior glass, cleaned streak-free.</p>
+        <span class="price"><small>from</small>$5.50</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="biz home ext" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-exterior.png)"></span></span>
+        <div class="tt"><h3>Exterior Cleaning</h3><div class="tags"><span>Commercial</span><span>Exterior</span></div></div>
+        <p>Patios, siding and driveways washed to restore curb appeal.</p>
+        <span class="price"><small>from</small>$124.90</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="biz home" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-disinfection.png)"></span></span>
+        <div class="tt"><h3>House Disinfection</h3><div class="tags"><span>Commercial</span><span>Residential</span></div></div>
+        <p>Air filtration to reduce bacteria, viruses and airborne contaminants.</p>
+        <span class="price q">Free quote</span>
+        <span class="go">Request a Quote <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="home" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-residential.png)"></span></span>
+        <div class="tt"><h3>Residential Cleaning</h3><div class="tags"><span>Residential</span></div></div>
+        <p>Weekly, bi-weekly or monthly upkeep for a consistently clean home.</p>
+        <span class="price"><small>from</small>$109.90</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="home" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-home-detox.png)"></span></span>
+        <div class="tt"><h3>Home Detox Cleaning</h3><div class="tags"><span>Residential</span></div></div>
+        <p>Non-toxic, eco-friendly products that target chemicals, allergens and pollutants.</p>
+        <span class="price"><small>from</small>$99.90</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="home" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-deep.png)"></span></span>
+        <div class="tt"><h3>Deep Cleaning</h3><div class="tags"><span>Residential</span></div></div>
+        <p>Baseboards, under furniture and behind appliances.</p>
+        <span class="price"><small>from</small>$134.90</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="home" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-move.png)"></span></span>
+        <div class="tt"><h3>Move In / Move Out Cleaning</h3><div class="tags"><span>Residential</span></div></div>
+        <p>A full clean for handing over keys or settling in.</p>
+        <span class="price"><small>from</small>$134.90</span>
+        <span class="go">Book Now <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="home ext" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-gutter.png)"></span></span>
+        <div class="tt"><h3>Gutter Cleaning</h3><div class="tags"><span>Exterior</span></div></div>
+        <p>Leaves, twigs and debris removed so water flows freely.</p>
+        <span class="price q">Free quote</span>
+        <span class="go">Request a Quote <svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="row" data-cat="home ext" href="https://www.alignworkssolutions.com/requestaquote">
+        <span class="ico"><span class="icon-mask" style="--i:url(images/icon-gutter-guard.png)"></span></span>
+        <div class="tt"><h3>Gutter Guard Installation</h3><div class="tags"><span>Exterior</span></div></div>
+        <p>Guards installed to keep debris out of your gutters.</p>
+        <span class="price q">Free quote</span>
+        <span class="go">Request a Quote <svg><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+
+    <div class="index-foot rv">
+      <p>All prices in CAD. Final pricing depends on size and condition.</p>
+      <a href="https://www.alignworkssolutions.com/services" class="btn btn-line">All service details <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- results -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="label">Real results. Real reviews.</span>
+        <h2 class="h-display">The proof is on the roofline.</h2>
+      </div>
+      <p>Actual photos from a Calgary job, and what clients say about working with our team.</p>
+    </div>
+
+    <div class="res-grid">
+      <div class="ba rv">
+        <figure><img src="images/gutter-before.jpg" alt="Gutter full of leaves and debris before cleaning"><figcaption>Before</figcaption></figure>
+        <figure><img src="images/gutter-after.jpg" alt="Clean gutter after AlignWorks service"><figcaption>After</figcaption></figure>
+        <div class="ba-note"><span><b>Gutter cleaning</b> · Calgary, AB</span><span>Real job photos</span></div>
+      </div>
+      <div class="reviews">
+        <div class="review dark rv">
+          <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Friendly, efficient and professional on our gutters and exterior windows. Fair pricing, no mess left behind, and Diego walked us through the results with photos. We'll be booking again.</blockquote>
+          <div class="who"><span class="av">D</span><div><b>Dori T.</b><span class="r">Gutter and window cleaning</span></div></div>
+        </div>
+        <div class="review rv">
+          <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>They fit in a last-minute request and did a great job on the gutters, windows and exterior at a competitive price. Clear, responsive communication. Recommended.</blockquote>
+          <div class="who"><span class="av">J</span><div><b>Jayasimha R.</b><span class="r">Gutters, windows and exterior</span></div></div>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.alignworkssolutions.com/portfolio" class="port-link rv">Explore Our Portfolio <svg><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<!-- skyline + owner -->
+<div class="skyline">
+  <img src="images/calgary-skyline.jpg" alt="Downtown Calgary skyline">
+  <div class="tag"><div class="wrap"><span class="label">About Us</span><strong>Made in Calgary.</strong></div></div>
+</div>
+<section class="owner" id="about">
+  <div class="wrap">
+    <div class="owner-photo rv">
+      <img src="images/diego-on-site.jpg" alt="Diego of AlignWorks working on a Calgary roofline">
+      <div class="cap"><b>Diego</b><span>CEO</span></div>
+    </div>
+    <div class="rv">
+      <span class="label">A word from our CEO</span>
+      <blockquote>We know our clients because we are part of the same neighbourhoods. Our goal is to build trust through great service, not just to clean.</blockquote>
+      <div class="about">
+        <div><h3>Locally owned and operated</h3><p>AlignWorks Cleaning Solutions is a Calgary company built on quality, reliability and customer care, with tailored services for both homes and businesses.</p></div>
+        <div><h3>Equipped and insured</h3><p>Our experienced cleaners bring high-performance equipment and non-toxic products that are safe for families, pets and the environment.</p></div>
+      </div>
+      <a href="https://www.alignworkssolutions.com/aboutus" class="btn btn-sky">More About Us <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- quote -->
+<section class="quote" id="quote">
+  <div class="wrap rv">
+    <aside class="q-side">
+      <span class="label">Contact Us</span>
+      <h2 class="h-display">Request a free quote.</h2>
+      <p>Tell us about your business property or home and we'll get back to you with a clear, no-obligation quote.</p>
+      <div class="q-lines">
+        <a href="tel:+15875724389"><svg><use href="#i-phone"/></svg><span><small>Call</small><b>(587) 572-4389</b></span></a>
+        <a href="mailto:services@alignworkssolutions.com"><svg><use href="#i-mail"/></svg><span><small>Email</small><b>services@alignworkssolutions.com</b></span></a>
+        <div><svg><use href="#i-pin"/></svg><span><small>Business address</small><b>Calgary, AB, Canada</b></span></div>
+      </div>
+      <div class="q-social">
+        <a href="https://www.instagram.com/alignworkssolutions/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="https://www.facebook.com/AlignWorksSolutions/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="https://www.tiktok.com/@alignworkssolutions" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
+        <a href="https://www.linkedin.com/company/alignworks-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+      </div>
+    </aside>
+
+    <form class="q-form" id="qform" onsubmit="event.preventDefault();document.getElementById('qok').style.display='block';this.reset();">
+      <div class="top">
+        <h3>Quote details</h3>
+        <div class="switch" id="formSwitch">
+          <span class="pill"></span>
+          <button type="button" class="on" data-aud="biz">Business</button>
+          <button type="button" data-aud="home">Home</button>
+        </div>
+      </div>
+      <div class="fields">
+        <div class="field"><label for="f-name">Full name</label><input id="f-name" required></div>
+        <div class="biz-only"><div class="field"><label for="f-co">Company name</label><input id="f-co"></div></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" required></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel"></div>
+        <div class="biz-only">
+          <div class="field"><label for="f-type">Property type</label>
+            <select id="f-type"><option>Office</option><option>Commercial space</option><option>New build / renovation</option><option>Building exterior</option><option>Other</option></select></div>
+          <div class="field"><label for="f-size">Approx. size (sq ft)</label><input id="f-size" placeholder="e.g. 3,500"></div>
+        </div>
+        <div class="field"><label for="f-svc">Service needed</label>
+          <select id="f-svc">
+            <optgroup label="Commercial"><option>Commercial Cleaning</option><option>Post-Construction Cleaning</option><option>Carpet Cleaning</option><option>Windows Cleaning</option><option>Exterior Cleaning</option><option>House Disinfection</option></optgroup>
+            <optgroup label="Residential"><option>Residential Cleaning</option><option>Home Detox Cleaning</option><option>Deep Cleaning</option><option>Move In / Move Out Cleaning</option><option>Gutter Cleaning</option><option>Gutter Guard Installation</option></optgroup>
+          </select></div>
+        <div class="field"><label for="f-freq">How often?</label>
+          <select id="f-freq"><option>One-time</option><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option></select></div>
+        <div class="field full"><label for="f-msg">Tell us about the job</label><textarea id="f-msg" placeholder="Address or area in Calgary, timing, anything we should know"></textarea></div>
+      </div>
+      <div class="q-submit">
+        <p>Prefer to talk? Call <a href="tel:+15875724389"><b>(587) 572-4389</b></a>.</p>
+        <button class="btn btn-ink" type="submit">Request a Free Quote <svg><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="q-ok" id="qok">Thanks! Your request is in. We'll be in touch shortly.</div>
+    </form>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <img src="images/logo-white.png" alt="AlignWorks Cleaning Solutions">
+        <p>Locally owned commercial and residential cleaning in Calgary. Own equipment, eco-friendly products, one-time or scheduled service.</p>
+        <div class="f-social">
+          <a href="https://www.instagram.com/alignworkssolutions/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://www.facebook.com/AlignWorksSolutions/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="https://www.tiktok.com/@alignworkssolutions" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
+          <a href="https://www.linkedin.com/company/alignworks-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.alignworkssolutions.com/home">Home</a></li>
+          <li><a href="https://www.alignworkssolutions.com/aboutus">About Us</a></li>
+          <li><a href="https://www.alignworkssolutions.com/services">Services</a></li>
+          <li><a href="https://www.alignworkssolutions.com/portfolio">Portfolio</a></li>
+          <li><a href="https://www.alignworkssolutions.com/blog">Blog</a></li>
+          <li><a href="https://www.alignworkssolutions.com/requestaquote">Request a Free Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#commercial">Commercial Cleaning</a></li>
+          <li><a href="#commercial">Post-Construction Cleaning</a></li>
+          <li><a href="#services">Carpet and Window Cleaning</a></li>
+          <li><a href="#services">Exterior and Gutter Cleaning</a></li>
+          <li><a href="#services">Residential and Deep Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="f-contact">
+        <h4>Contact</h4>
+        <a href="tel:+15875724389"><svg><use href="#i-phone"/></svg>(587) 572-4389</a>
+        <a href="mailto:services@alignworkssolutions.com"><svg><use href="#i-mail"/></svg>services@alignworkssolutions.com</a>
+        <div><svg><use href="#i-pin"/></svg>Calgary, AB, Canada</div>
+      </div>
+    </div>
+    <div class="f-word" aria-hidden="true">Align<span>Works</span></div>
+    <div class="f-bottom">
+      <span>© 2026 AlignWorks Cleaning Solutions. All rights reserved. <a href="https://www.alignworkssolutions.com/privacy-policy">Privacy Policy</a></span>
+      <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+15875724389"><svg><use href="#i-phone"/></svg>Call</a>
+  <a href="#quote">Free Quote</a>
+</div>
+
+<script>
+// audience switches
+function setSwitch(sw, aud){
+  sw.classList.toggle('home', aud==='home');
+  sw.querySelectorAll('button').forEach(b=>b.classList.toggle('on', b.dataset.aud===aud));
+}
+const heroSw=document.getElementById('heroSwitch');
+heroSw.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+  setSwitch(heroSw,b.dataset.aud);
+  document.querySelectorAll('.aud-panel').forEach(p=>p.classList.toggle('on',p.dataset.panel===b.dataset.aud));
+}));
+const formSw=document.getElementById('formSwitch'), qform=document.getElementById('qform');
+function formMode(m){setSwitch(formSw,m);qform.classList.toggle('home-mode',m==='home');
+  const svc=document.getElementById('f-svc');svc.selectedIndex = m==='home'?6:0;}
+formSw.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>formMode(b.dataset.aud)));
+document.querySelectorAll('[data-mode]').forEach(a=>a.addEventListener('click',()=>formMode(a.dataset.mode)));
+
+// commercial scope tabs
+const sBtns=document.querySelectorAll('.scope-list button'), panes=document.querySelectorAll('.scope-pane');
+sBtns.forEach(b=>b.addEventListener('click',()=>{
+  sBtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  panes.forEach((p,i)=>p.classList.toggle('on',i==b.dataset.scope));
+}));
+
+// service filters
+document.querySelectorAll('#filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;
+  document.querySelectorAll('.ledger .row').forEach(r=>r.classList.toggle('hide', f!=='all' && !r.dataset.cat.split(' ').includes(f)));
+}));
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
